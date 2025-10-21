@@ -7,35 +7,39 @@ const skillsData = {
   Libraries: ['Pandas', 'NumPy', 'Scikit-learn', 'Polars', 'Flask'],
 };
 
+const certifications = [
+  'Swift – Certified User (Dec. 2024)',
+  'Business Industry Operations Certification (Jul. 2023)',
+  'Business Intelligence Professional Certification (Jul. 2022)',
+];
+
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-4 bg-navy-900">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-          Technical Skills
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(skillsData).map(([category, skills]) => (
-            <div
-              key={category}
-              className="bg-navy-800 p-6 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <h3 className="text-2xl font-bold text-blue-400 mb-4 border-b border-blue-500/30 pb-2">
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1.5 bg-navy-700 text-gray-300 rounded-full text-sm hover:bg-blue-600 hover:text-white transition-colors duration-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
+    <section id="skills" className="max-w-4xl mx-auto px-6 py-12">
+      <div className="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 className="text-2xl font-light text-gray-900 mb-6">Technical Skills</h2>
+          <div className="space-y-4">
+            {Object.entries(skillsData).map(([category, skills]) => (
+              <div key={category}>
+                <h3 className="text-sm font-medium text-gray-700 mb-2">{category}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {skills.join(', ')}
+                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-2xl font-light text-gray-900 mb-6">Certifications</h2>
+          <ul className="space-y-2">
+            {certifications.map((cert, index) => (
+              <li key={index} className="text-sm text-gray-600">
+                {cert}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

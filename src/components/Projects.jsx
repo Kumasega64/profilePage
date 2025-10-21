@@ -37,50 +37,33 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-navy-900">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-          Projects
-        </h2>
+    <section id="projects" className="max-w-4xl mx-auto px-6 py-12">
+      <h2 className="text-2xl font-light text-gray-900 mb-8">Projects</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="bg-navy-800 p-6 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 border border-navy-700 hover:border-blue-500/50"
-            >
-              <div className="mb-4">
-                <h3 className="text-2xl font-bold text-blue-400 mb-1">
-                  {project.title}
-                </h3>
-                {project.event && (
-                  <p className="text-sm text-cyan-400 font-semibold">
-                    {project.event}
-                  </p>
-                )}
-              </div>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.stack.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-xs font-medium border border-blue-500/30"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <ul className="space-y-2">
-                {project.description.map((item, idx) => (
-                  <li key={idx} className="text-gray-300 text-sm leading-relaxed">
-                    • {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+      <div className="grid md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className="border border-gray-200 p-4 hover:border-gray-400 transition-colors"
+          >
+            <h3 className="text-base font-medium text-gray-900 mb-1">
+              {project.title}
+            </h3>
+            {project.event && (
+              <p className="text-xs text-gray-500 mb-3">
+                {project.event}
+              </p>
+            )}
+            <p className="text-xs text-gray-500 mb-3">
+              {project.stack.join(' • ')}
+            </p>
+            <ul className="space-y-1 text-sm text-gray-600">
+              {project.description.map((item, idx) => (
+                <li key={idx}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -13,4 +13,12 @@
     @apply bg-white text-gray-900;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
+
+  @keyframes text-carousel {
+    0%, 10% { transform: translateY(0); }
+    20%, 30% { transform: translateY(-3.5rem); }
+    40%, 60% { transform: translateY(-7rem); }
+    70%, 80% { transform: translateY(-3.5rem); }
+    90%, 100% { transform: translateY(0); }
+  }
 }

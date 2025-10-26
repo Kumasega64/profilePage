@@ -1,6 +1,46 @@
 import React from "react";
+import FinancioImg from "../assets/Financio.jpg";
+import buddyImg from "../assets/studyBuddy.png";
+import IRM from "../assets/IRM.jpg";
+import MDC from "../assets/mdc.jpg";
+import TN from "../assets/TN.jpg";
+import PB from "../assets/logo.png"
+
 
 const Page = () => {
+  const workHistory = [
+    {
+      id: 1,
+      company: "Miami Dade College",
+      role: "Data Analyst Tutor",
+      period: "Sep 2022 - May 2025",
+      description:
+        "",
+      image: MDC,
+      link: "#",
+    },
+    {
+      id: 2,
+      company: "IRM",
+      role: "Data Analyst / Full Stack Dev",
+      period: "Jan 2024 - May 2025",
+      description:
+        "",
+      image: IRM,
+      link: "#",
+    },
+    {
+      id: 2,
+      company: "True North Academy",
+      role: "Data Engineer/Frontend Developer",
+      period: "July 2025 - Present",
+      description:"",
+      image: TN,
+      link: "#",
+    },
+    // Add more work history objects here
+  ];
+
   return (
     <div className="font-sans flex flex-col min-h-screen bg-gradient-to-b from-[#07131c] to-[#305472] text-gray-200">
       {/* Navigation Bar */}
@@ -101,25 +141,60 @@ const Page = () => {
       {/* Projects Section */}
       <section id="projects" className="flex flex-col items-center py-20">
         <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
-        <div className="bg-[#474349] rounded-2xl p-6 w-3/5">
+
+        <div className="bg-[#474349] rounded-2xl p-6 w-4/5 max-w-6xl">
           <div className="flex flex-wrap justify-center bg-gray-200 rounded-lg p-4">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
+            {[
+              {
+                title: "PrepBear",
+                description:
+                  "PrepBear is an AI-powered mock interview web application built on top of Google’s open-source Live API Web Console project. PrepBear helps students and job seekers practice behavioral and technical interviews tailored to specific job titles, companies, and their resumes.",
+                image: PB,
+                link: "https://github.com/Albertoh16/Bear-Necessities",
+              },
+              {
+                title: "TLDR",
+                description:
+                  "Created a tool that quickly summarizes content, helping users decide if an article is worth reading.",
+                image: "assets/portfolio.jpg",
+                link: "https://github.com/Albertoh16/TLDR",
+              },
+              {
+                title: "Financio",
+                description:
+                  "Our web app helps users improve their financial literacy through interactive learning. It includes a quiz to assess financial knowledge, a custom chatbot that explains financial concepts and answers questions, and a budgeting tool that tracks spending and helps users manage their finances effectively.",
+                image: FinancioImg,
+                link: "https://github.com/timothy-dance/financio",
+              },
+              {
+                title: "Study Buddy",
+                description:
+                  "Study Buddy is a mobile application that turns studying into an interactive and rewarding experience. Users create their own personalized 'Study Buddy' avatar and level it up by engaging with educational content and mini-games.",
+                image: buddyImg,
+                link: "https://github.com/Kumasega64/studyDen",
+              },
+            ].map((project, index) => (
               <div
-                key={num}
-                className="bg-gray-100 w-1/3 m-2 p-3 text-center text-2xl rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+                key={index}
+                className="bg-gray-100 w-full sm:w-1/2 lg:w-1/3 m-2 p-3 text-center text-2xl rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg"
               >
-                <a href="#" className="block no-underline text-gray-800">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block no-underline text-gray-800"
+                >
                   <header className="relative h-48 overflow-hidden rounded-lg mb-2">
                     <img
-                      src="assets/stu.jpg"
-                      alt="Project"
+                      src={project.image}
+                      alt={project.title}
                       className="absolute inset-0 w-full h-full object-cover"
                     />
                     <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-lg py-2">
-                      Project {num}
+                      {project.title}
                     </div>
                   </header>
-                  <p className="text-base">This is a test project card.</p>
+                  <p className="text-base">{project.description}</p>
                 </a>
               </div>
             ))}
@@ -133,37 +208,38 @@ const Page = () => {
         className="relative max-w-6xl mx-auto my-20 text-center"
       >
         <h2 className="text-3xl font-bold text-white mb-6">Work History</h2>
-        <div className="flex flex-row items-center space-x-6 justify-center">
-          {[1, 2].map((i) => (
-            <div key={i} className="group relative">
-              <button className="w-12 h-12 rounded-full bg-cover bg-center bg-[url('assets/stu.jpg')] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800" />
-              <div className="absolute bottom-full mb-2 hidden w-64 text-sm text-gray-500 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 group-hover:block group-hover:opacity-100 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                <a
-                  href="#"
-                  className="flex flex-col items-center bg-slate-200 border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 w-96 p-6 text-xl md:w-[500px] md:p-8 md:text-2xl"
-                >
-                  <div className="flex flex-col justify-between p-4 leading-normal">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      IRM
-                    </h5>
-                    <h3 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      Jan 2024 - May 2025
-                    </h3>
-                    <h1 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                      Data Analyst / Full Stack Dev
-                    </h1>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                      Here are the biggest enterprise technology acquisitions of
-                      2021 so far, in reverse chronological order.
-                    </p>
-                  </div>
-                </a>
+
+        <div className="flex flex-row items-center justify-center flex-wrap gap-10">
+          {workHistory.map((job) => (
+            <div key={job.id} className="relative group">
+              {/* Image Button */}
+              <button
+                style={{
+                  backgroundImage: `url(${job.image})`,
+                }}
+                className="w-24 h-24 rounded-full bg-cover bg-center shadow-md hover:scale-105 hover:ring-4 hover:ring-blue-400 transition-transform duration-300"
+              />
+
+              {/* Hover Card */}
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-4 w-72 p-4 bg-white text-gray-800 rounded-lg shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 transform transition-all duration-300 z-10">
+                <h3 className="text-xl font-bold mb-1">{job.company}</h3>
+                <p className="text-sm text-gray-600">{job.period}</p>
+                <p className="text-base font-semibold">{job.role}</p>
+                <p className="text-sm text-gray-700 mt-2">{job.description}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
     </div>
+
+    <section
+        id="work-history"
+        className="relative max-w-6xl mx-auto my-20 text-center"
+      >
+        <h2 className="text-3xl font-bold text-white mb-6">Achivments</h2>
+
+    </section>
   );
 };
 

@@ -232,14 +232,6 @@ const Page = () => {
         </div>
       </section>
     </div>
-
-    <section
-        id="work-history"
-        className="relative max-w-6xl mx-auto my-20 text-center"
-      >
-        <h2 className="text-3xl font-bold text-white mb-6">Achivments</h2>
-
-    </section>
   );
 };
 

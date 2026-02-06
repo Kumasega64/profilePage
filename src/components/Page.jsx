@@ -13,7 +13,7 @@ const Page = () => {
       id: 1,
       company: "Miami Dade College",
       role: "Data Analyst Tutor",
-      period: "Sep 2022 - May 2025",
+      period: "Sep 2022 - Jan 2024",
       description:
         "",
       image: MDC,
@@ -168,73 +168,7 @@ const Page = () => {
   </a>
 </div>
 
-      </section>
-
-      {/* Projects Section */}
-      <section id="projects" className="flex flex-col items-center py-20">
-        <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
-
-        <div className="bg-[#474349] rounded-2xl p-6 w-4/5 max-w-6xl">
-          <div className="flex flex-wrap justify-center bg-gray-200 rounded-lg p-4">
-            {[
-              {
-                title: "PrepBear",
-                description:
-                  "PrepBear is an AI-powered mock interview web application built on top of Google’s open-source Live API Web Console project. PrepBear helps students and job seekers practice behavioral and technical interviews tailored to specific job titles, companies, and their resumes.",
-                image: PB,
-                link: "https://github.com/Albertoh16/Bear-Necessities",
-              },
-              {
-                title: "TLDR",
-                description:
-                  "Created a tool that quickly summarizes content, helping users decide if an article is worth reading.",
-                image: "assets/portfolio.jpg",
-                link: "https://github.com/Albertoh16/TLDR",
-              },
-              {
-                title: "Financio",
-                description:
-                  "Our web app helps users improve their financial literacy through interactive learning. It includes a quiz to assess financial knowledge, a custom chatbot that explains financial concepts and answers questions, and a budgeting tool that tracks spending and helps users manage their finances effectively.",
-                image: FinancioImg,
-                link: "https://github.com/timothy-dance/financio",
-              },
-              {
-                title: "Study Buddy",
-                description:
-                  "Study Buddy is a mobile application that turns studying into an interactive and rewarding experience. Users create their own personalized 'Study Buddy' avatar and level it up by engaging with educational content and mini-games.",
-                image: buddyImg,
-                link: "https://github.com/Kumasega64/studyDen",
-              },
-            ].map((project, index) => (
-              <div
-                key={index}
-                className="bg-gray-100 w-full sm:w-1/2 lg:w-1/3 m-2 p-3 text-center text-2xl rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg"
-              >
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block no-underline text-gray-800"
-                >
-                  <header className="relative h-48 overflow-hidden rounded-lg mb-2">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                    <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-lg py-2">
-                      {project.title}
-                    </div>
-                  </header>
-                  <p className="text-base">{project.description}</p>
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Work History Section */}
+{/* Work History Section */}
       <section
         id="work-history"
         className="relative max-w-6xl mx-auto my-20 text-center"
@@ -263,6 +197,106 @@ const Page = () => {
           ))}
         </div>
       </section>
+
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="flex flex-col items-center py-20">
+        <h2 className="text-3xl font-bold text-white mb-6">Projects</h2>
+
+        <div className="bg-[#474349] rounded-2xl p-6 w-4/5 max-w-6xl">
+          <div className="flex flex-wrap justify-center bg-gray-200 rounded-lg p-4">
+            {[
+              {
+                title: "PrepBear",
+                description:
+                  "PrepBear is an AI-powered mock interview web application that helps job seekers practice behaviorals that are tailored to specific job titles, companies, and their resumes.",
+                languages: "React, Tailwind, Gemini, Typescript",
+                image: PB,
+                link: "https://github.com/Albertoh16/Bear-Necessities",
+              },
+              {
+                title: "TLDR",
+                description:
+                  "Created a tool that quickly summarizes web articles helping users quickly decide if they are worth reading.",
+                languages: "Bart Model, Flask, AI",
+                image: "assets/portfolio.jpg",
+                link: "https://github.com/Albertoh16/TLDR",
+              },
+              {
+                title: "Financio",
+                description:
+                  "A web app designed to improve financial literacy with quizzes, budgeting tools, and an AI chatbot trained to answer any financial question",
+                languages: "React, SQL, Jave",
+                image: FinancioImg,
+                link: "https://github.com/timothy-dance/financio",
+              },
+              {
+                title: "Study Buddy",
+                description:
+                  "A mobile app that lets users take pictures of study material and turn them into quizzes using Tesseract and AI",
+                languages: "Tesseact, SQL, Jave",
+                image: buddyImg,
+                link: "https://github.com/Kumasega64/studyDen",
+              },
+              {
+                title: "Steam Discount Webpage",
+                description:
+                  "A web page that lets users dynamically fetch Steam sale recommendations based on input criteria.",
+                languages: " React, Typescript",
+                image: buddyImg,
+                link: "https://github.com/Kumasega64/SteamDiscountWebpage",
+              },
+              {
+                title: "Sweet Sweet Recipes",
+                description:
+                  "An app that allows users to find random recipes save and make edits to them. Made for apple phones",
+                languages: " Swift, Xcode",
+                image: buddyImg,
+                link: "https://github.com/Kumasega64/SweetSweetRecipes",
+              },
+              {
+                title: "Acess Pizza Store",
+                description:
+                  "A beginner friendly Microsoft Access (.accdb) project built as a hands-on practice template. ",
+                languages: " SQL, Access",
+                image: buddyImg,
+                link: "https://github.com/Kumasega64?tab=repositories",
+              },
+            ].map((project, index) => (
+              <div
+                key={index}
+                className="bg-gray-100 w-full sm:w-1/2 lg:w-1/3 m-2 p-3 text-center text-2xl rounded-lg shadow transition-transform transform hover:-translate-y-1 hover:shadow-lg"
+              >
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block no-underline text-gray-800"
+                >
+                  <header className="relative h-48 overflow-hidden rounded-lg mb-2">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-lg py-2">
+                      {project.title}
+                    </div>
+                  </header>
+                  <p className="text-base mb-2">{project.description}</p>
+
+                  <p className="text-sm text-gray-700">
+                  <strong>Coding Languages:</strong> {project.languages}
+                  </p>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      
     </div>
   );
 };

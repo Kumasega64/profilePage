@@ -27,6 +27,13 @@ const Hero = () => {
           {titles[currentTitleIndex]}
         </p>
 
+
+        <div className="max-w-2xl mx-auto text-gray-500 font-light leading-relaxed space-y-2">
+        <p>
+          Data Analyst with 3+ years of experience working on databases, visualizations, data pipelines, and web development. 
+        </p>
+        </div>
+
         <div className="pt-4 flex justify-center items-center space-x-6">
           <a
             href="/resume.pdf"

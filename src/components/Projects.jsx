@@ -62,7 +62,7 @@ const projects = [
 const Projects = () => {
   return (
     <section id="projects" className="flex flex-col items-center py-20">
-      <h2 className="text-3xl font-bold mb-6 text-gray-800">Projects</h2>
+      <h2 className="text-3xl font-bold mb-10">Projects</h2>
 
       <div className="flex flex-wrap justify-center gap-4 max-w-6xl">
         {projects.map((project) => (

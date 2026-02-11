@@ -1,18 +1,13 @@
 import React from "react";
-import Nav from "./components/Nav";
-import About from "./components/About";
-import Work from "./components/Work";
-import Projects from "./components/Projects";
+import Page from "./components/Page";
 
-const Page = () => {
+
+const App = () => {
   return (
     <div className="font-sans flex flex-col min-h-screen bg-gradient-to-b from-[#07131c] to-[#305472] text-gray-200">
-      <Nav />
-      <About />
-      <Work />
-      <Projects />
+      <Page />
     </div>
   );
 };
 
-export default Page;
+export default App;

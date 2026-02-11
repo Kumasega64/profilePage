@@ -15,10 +15,9 @@
   }
 
   @keyframes text-carousel {
-    0%, 10% { transform: translateY(0); }
-    20%, 30% { transform: translateY(-3.5rem); }
-    40%, 60% { transform: translateY(-7rem); }
-    70%, 80% { transform: translateY(-3.5rem); }
-    90%, 100% { transform: translateY(0); }
-  }
+  0%, 16.666% { transform: translateY(0); }
+  33.333%, 49.999% { transform: translateY(-33.333%); }
+  66.666%, 83.333% { transform: translateY(-66.666%); }
+  100% { transform: translateY(0); }
+}
 }
